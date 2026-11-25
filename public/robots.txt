@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /livewire/
+Disallow: /build/
+
+# Sitemap Oficial
+Sitemap: http://calculadora.capybarasdigitales.com/sitemap.xml

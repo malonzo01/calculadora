@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* ─── Paleta Oficial Capybaras Digitales ─── */
+    --color-agro-green:        #33521c;   /* Verde principal */
+    --color-agro-green-light:  #4a6b32;   /* Verde medio */
+    --color-agro-green-pale:   #dce6d1;   /* Verde claro suave */
+    --color-agro-green-bg:     #e8f1dc;   /* Fondo verde claro */
+    --color-agro-brown:        #835425;   /* Tierra Capybara */
+    --color-agro-brown-light:  #b07a45;   /* Tierra claro */
+    --color-agro-brown-pale:   #f5ede4;   /* Tierra fondo suave */
+    --color-agro-gold:         #DAA520;   /* Dorado / Ámbar acento */
+    --color-agro-gold-light:   #f6be3b;   /* Dorado brillante */
+    --color-agro-gold-bg:      #fdf7e7;   /* Dorado fondo suave */
+    --color-agro-cream:        #FDFBF7;   /* Crema fondo base */
+    --color-agro-cream-dark:   #F4EFE6;   /* Crema oscuro */
+    --color-agro-ink:          #161E11;   /* Tinta texto */
+    --color-agro-muted:        #525b4d;   /* Texto secundario */
+    --color-agro-border:       #d8ddd3;   /* Bordes */
+
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 2rem;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-agro-cream);
+        color: var(--color-agro-ink);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+        background-color: var(--color-agro-green);
+        color: #ffffff;
+    }
+}
+
+/* Custom styled range slider */
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 9999px;
+    background: #e2e8dd;
+    outline: none;
+    transition: background 0.2s ease;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #33521c;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(51, 82, 28, 0.35);
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background: #4a6b32;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #33521c;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(51, 82, 28, 0.35);
+    cursor: pointer;
+}
