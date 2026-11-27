@@ -27,25 +27,25 @@
 
     <!-- Schema.org JSON-LD (SEO y GEO) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Calculadora de Automatización WhatsApp",
-      "url": "http://calculadora.capybarasdigitales.com",
-      "applicationCategory": "BusinessApplication, FinancialApplication",
-      "operatingSystem": "All",
-      "description": "Calculadora interactiva en USD y Bolívares (Tasa Oficial BCV) para estimar costos de Meta Cloud API, mano de obra y retorno de inversión al automatizar WhatsApp con Inteligencia Artificial.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0.00",
-        "priceCurrency": "USD"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "Capybaras Digitales",
-        "url": "https://capybarasdigitales.com"
-      }
-    }
+    {!! json_encode([
+      '@context' => 'https://schema.org',
+      '@type' => 'WebApplication',
+      'name' => 'Calculadora de Automatización WhatsApp',
+      'url' => 'http://calculadora.capybarasdigitales.com',
+      'applicationCategory' => ['BusinessApplication', 'FinancialApplication'],
+      'operatingSystem' => 'All',
+      'description' => 'Calculadora interactiva en USD y Bolívares (Tasa Oficial BCV) para estimar costos de Meta Cloud API, mano de obra y retorno de inversión al automatizar WhatsApp con Inteligencia Artificial.',
+      'offers' => [
+        '@type' => 'Offer',
+        'price' => '0.00',
+        'priceCurrency' => 'USD'
+      ],
+      'provider' => [
+        '@type' => 'Organization',
+        'name' => 'Capybaras Digitales',
+        'url' => 'https://capybarasdigitales.com'
+      ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 
     <!-- Favicon -->
