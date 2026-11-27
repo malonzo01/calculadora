@@ -1,3 +1,22 @@
+# Robots.txt Oficial Calculadora de WhatsApp · Capybaras Digitales
+
+# Buscadores Generales
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /livewire/
+Disallow: /build/
+
+# Motores de Inteligencia Artificial (GEO)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+
 User-agent: *
 Allow: /
 Disallow: /livewire/

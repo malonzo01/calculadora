@@ -157,6 +157,14 @@ new class extends Component {
 
     public function descargarPdf()
     {
+        $ip = request()->ip();
+        if (\Illuminate\Support\Facades\RateLimiter::tooManyAttempts('pdf-dl:' . $ip, 8)) {
+            $seconds = \Illuminate\Support\Facades\RateLimiter::availableIn('pdf-dl:' . $ip);
+            session()->flash('error', "Demasiadas descargas solicitadas. Por favor espera {$seconds} segundos.");
+            return;
+        }
+        \Illuminate\Support\Facades\RateLimiter::hit('pdf-dl:' . $ip, 60);
+
         $this->validate([
             'email' => 'nullable|email',
         ]);

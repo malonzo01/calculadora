@@ -1,0 +1,22 @@
+# Calculadora de Costos & Retorno de Automatización WhatsApp · Capybaras Digitales
+
+> Herramienta financiera interactiva gratuita para dueños de negocios, comercios, clínicas y empresas de servicios en Venezuela y Latinoamérica que desean calcular cuánto dinero pierden por demorar en responder WhatsApp y cuánto cuesta implementar la API oficial de Meta con IA.
+
+## Información General
+- **Nombre:** Calculadora de Automatización WhatsApp
+- **Desarrollador:** Capybaras Digitales (https://capybarasdigitales.com)
+- **URL Oficial:** http://calculadora.capybarasdigitales.com
+- **Moneda Base:** Dólares Americanos ($ USD) y Bolívares (VES) sincronizados diariamente con la Tasa Oficial del Banco Central de Venezuela (BCV).
+
+## ¿Qué Calcula esta Herramienta?
+1. **Costo de Mano de Obra Manual:** Cuánto paga la empresa en horas/hombre por responder chats repetitivos.
+2. **Costo de Mensajería Oficial de Meta:** Tarifas de conversaciones de Marketing, Utilidad, Autenticación y Servicio de WhatsApp Cloud API.
+3. **Fuga de Clientes por Inasistencia / Demora:** Dinero que se pierde cuando un prospecto cotiza y nadie le responde en los primeros 5 a 15 minutos (típicamente entre 25% y 40% de fuga).
+4. **Ventas Necesarias para Recuperar la Inversión:** Cuántas ventas recuperadas al mes se requieren para que el sistema de IA se pague solo (en la mayoría de los casos basta con 1 o 2 ventas).
+
+## Presets Especializados
+- **Odontología / Clínicas Dentales:** Calibrado con 35 conversaciones/día, ticket promedio de $45 USD y 30% fuga. Enlaza directamente al software especializado CapyDental (https://crm.capybarasdigitales.com).
+- **Comercio Local:** Ticket promedio de $25 USD.
+- **Servicios / B2B:** Ticket promedio de $150 USD.
+- **E-Commerce:** Ticket promedio de $45 USD con alto volumen.
+- **Salud y Consultas:** Ticket promedio de $20 USD.

@@ -7,6 +7,46 @@
 
     <title>{{ $title ?? 'Calculadora de Costos & Retorno WhatsApp · Capybaras Digitales' }}</title>
     <meta name="description" content="Calculá cuánto te cuesta atender por WhatsApp a mano, cuánto te cobra Meta con las tarifas oficiales y cuánta plata recuperás al automatizar con Capybaras Digitales.">
+    <meta name="keywords" content="calculadora whatsapp venezuela, costo mensajes whatsapp meta, automatizacion whatsapp ia, fuga de clientes whatsapp, roi whatsapp bcv, capybaras digitales">
+    <meta name="author" content="Capybaras Digitales">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Calculadora WhatsApp · Capybaras Digitales">
+    <meta property="og:locale" content="es_VE">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $title ?? 'Calculadora: ¿Cuánto te sale automatizar tu WhatsApp? · Capybaras Digitales' }}">
+    <meta property="og:description" content="Descubrí en 60 segundos tu fuga de clientes por responder tarde, el costo oficial de Meta y tu retorno exacto en USD y Bolívares Tasa BCV.">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ $title ?? 'Calculadora de Costos & Retorno WhatsApp · Capybaras Digitales' }}">
+    <meta name="twitter:description" content="Calculá tu costo de atención, facturación de Meta y recupero con IA en WhatsApp.">
+
+    <!-- Schema.org JSON-LD (SEO y GEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Calculadora de Automatización WhatsApp",
+      "url": "http://calculadora.capybarasdigitales.com",
+      "applicationCategory": "BusinessApplication, FinancialApplication",
+      "operatingSystem": "All",
+      "description": "Calculadora interactiva en USD y Bolívares (Tasa Oficial BCV) para estimar costos de Meta Cloud API, mano de obra y retorno de inversión al automatizar WhatsApp con Inteligencia Artificial.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Capybaras Digitales",
+        "url": "https://capybarasdigitales.com"
+      }
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦫</text></svg>">
