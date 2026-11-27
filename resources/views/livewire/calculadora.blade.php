@@ -60,6 +60,12 @@ new class extends Component {
                 $this->tasaBCV = (float) $sim->tasa_bcv;
                 $this->savedUuid = $sim->uuid;
             }
+        } else {
+            // Permitir precargar preset desde URL (ej: ?preset=dental o ?sector=dental)
+            $presetParam = request()->query('preset') ?: request()->query('sector');
+            if ($presetParam) {
+                $this->aplicarPreset($presetParam);
+            }
         }
     }
 
@@ -86,6 +92,7 @@ new class extends Component {
 
         match ($tipo) {
             'comercio' => [($this->convDia = 25), ($this->msjPorConv = 3), ($this->personas = 1), ($this->horasDia = 3.5), ($this->ticketUSD = 25.0), ($this->costoHoraUSD = 3.5), ($this->sinResponder = 30)],
+            'dental' => [($this->convDia = 35), ($this->msjPorConv = 3), ($this->personas = 1), ($this->horasDia = 4.0), ($this->ticketUSD = 45.0), ($this->costoHoraUSD = 4.0), ($this->sinResponder = 30)],
             'servicios' => [($this->convDia = 15), ($this->msjPorConv = 4), ($this->personas = 1), ($this->horasDia = 4.0), ($this->ticketUSD = 150.0), ($this->costoHoraUSD = 6.0), ($this->sinResponder = 35)],
             'ecommerce' => [($this->convDia = 120), ($this->msjPorConv = 3), ($this->personas = 2), ($this->horasDia = 6.0), ($this->ticketUSD = 45.0), ($this->costoHoraUSD = 4.0), ($this->sinResponder = 40)],
             'salud' => [($this->convDia = 60), ($this->msjPorConv = 2), ($this->personas = 2), ($this->horasDia = 5.0), ($this->ticketUSD = 20.0), ($this->costoHoraUSD = 4.5), ($this->sinResponder = 25)],
@@ -274,6 +281,10 @@ new class extends Component {
             <p class="text-xs font-semibold uppercase tracking-wider text-[#835425] mb-2.5">O elige un rubro para
                 empezar con números típicos en USD:</p>
             <div class="flex flex-wrap items-center justify-center gap-2">
+                <button type="button" wire:click="aplicarPreset('dental')"
+                    class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all border {{ $activePreset === 'dental' ? 'bg-[#33521c] text-white border-[#33521c] shadow-xs' : 'bg-white hover:bg-[#e8f1dc] text-[#33521c] border-[#d8ddd3]' }}">
+                    🦷 Odontología / Clínica Dental (Ticket $45 USD)
+                </button>
                 <button type="button" wire:click="aplicarPreset('comercio')"
                     class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all border {{ $activePreset === 'comercio' ? 'bg-[#33521c] text-white border-[#33521c] shadow-xs' : 'bg-white hover:bg-[#e8f1dc] text-[#33521c] border-[#d8ddd3]' }}">
                     🏪 Comercio Local (Ticket $25 USD)
@@ -634,6 +645,29 @@ new class extends Component {
             </div>
         @endif
     </section>
+
+    <!-- Banner Recomendado CapyDental para Clínicas Odontológicas -->
+    @if($activePreset === 'dental' || request()->query('preset') === 'dental' || request()->query('sector') === 'dental')
+        <div class="rounded-3xl p-6 sm:p-7 bg-gradient-to-r from-teal-900 to-[#1b4332] text-white border border-teal-400/30 shadow-lg flex flex-col md:flex-row items-center justify-between gap-5">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-teal-400/20 text-teal-300 border border-teal-300/30 flex items-center justify-center text-3xl font-black shrink-0">
+                    🦷
+                </div>
+                <div>
+                    <span class="text-[11px] font-extrabold uppercase tracking-widest text-teal-300 bg-teal-950/60 px-2.5 py-1 rounded-full border border-teal-500/30">Solución Especializada</span>
+                    <h3 class="text-lg font-black text-white mt-1">¿Tienes una Clínica Dental? Conoce CapyDental</h3>
+                    <p class="text-xs sm:text-sm text-teal-100/90 max-w-xl mt-0.5">
+                        CRM Odontológico con Inteligencia Artificial que atiende pacientes en WhatsApp 24/7, responde dudas sobre tratamientos y agenda citas directamente en tu calendario.
+                    </p>
+                </div>
+            </div>
+            <a href="https://crm.capybarasdigitales.com/#demo" target="_blank"
+                class="w-full md:w-auto px-6 py-3.5 rounded-xl bg-teal-400 hover:bg-teal-300 text-teal-950 font-black text-xs sm:text-sm text-center transition-all shadow-md shrink-0 flex items-center justify-center gap-2">
+                <span>Ver Demo de CapyDental</span>
+                <span>→</span>
+            </a>
+        </div>
+    @endif
 
     <!-- Aviso Importante de Meta -->
     <div class="rounded-2xl p-5 bg-[#fdf7e7] border-l-4 border-[#DAA520] flex items-start gap-4">
