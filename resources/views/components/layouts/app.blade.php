@@ -28,7 +28,7 @@
     <!-- Schema.org JSON-LD (SEO y GEO) -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
+      "@@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Calculadora de Automatización WhatsApp",
       "url": "http://calculadora.capybarasdigitales.com",

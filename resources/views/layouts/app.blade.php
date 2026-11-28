@@ -61,8 +61,8 @@
     <!-- Schema.org JSON-LD (GEO & Generative Engine Optimization) -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@@context": "https://schema.org",
+      "@@graph": [
         {
           "@type": "WebApplication",
           "@id": "http://calculadora.capybarasdigitales.com/#webapp",
