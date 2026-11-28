@@ -656,21 +656,27 @@ new class extends Component {
 
     <!-- Banner Recomendado CapyDental para Clínicas Odontológicas -->
     @if($activePreset === 'dental' || request()->query('preset') === 'dental' || request()->query('sector') === 'dental')
-        <div class="rounded-3xl p-6 sm:p-7 bg-gradient-to-r from-teal-900 to-[#1b4332] text-white border border-teal-400/30 shadow-lg flex flex-col md:flex-row items-center justify-between gap-5">
+        <div style="background: linear-gradient(135deg, #0b3d2c 0%, #164e3f 100%); color: #ffffff;" 
+             class="rounded-3xl p-6 sm:p-7 border border-emerald-400/30 shadow-lg flex flex-col md:flex-row items-center justify-between gap-5">
             <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-2xl bg-teal-400/20 text-teal-300 border border-teal-300/30 flex items-center justify-center text-3xl font-black shrink-0">
+                <div style="background-color: rgba(45, 212, 191, 0.2); border: 1px solid rgba(45, 212, 191, 0.4); color: #5eead4;" 
+                     class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl font-black shrink-0">
                     🦷
                 </div>
                 <div>
-                    <span class="text-[11px] font-extrabold uppercase tracking-widest text-teal-300 bg-teal-950/60 px-2.5 py-1 rounded-full border border-teal-500/30">Solución Especializada</span>
+                    <span style="background-color: rgba(4, 47, 46, 0.8); color: #5eead4; border: 1px solid rgba(45, 212, 191, 0.4);" 
+                          class="inline-block text-[11px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full">
+                        Solución Especializada
+                    </span>
                     <h3 class="text-lg font-black text-white mt-1">¿Tienes una Clínica Dental? Conoce CapyDental</h3>
-                    <p class="text-xs sm:text-sm text-teal-100/90 max-w-xl mt-0.5">
+                    <p class="text-xs sm:text-sm text-emerald-100/90 max-w-xl mt-0.5">
                         CRM Odontológico con Inteligencia Artificial que atiende pacientes en WhatsApp 24/7, responde dudas sobre tratamientos y agenda citas directamente en tu calendario.
                     </p>
                 </div>
             </div>
             <a href="https://crm.capybarasdigitales.com/#demo" target="_blank"
-                class="w-full md:w-auto px-6 py-3.5 rounded-xl bg-teal-400 hover:bg-teal-300 text-teal-950 font-black text-xs sm:text-sm text-center transition-all shadow-md shrink-0 flex items-center justify-center gap-2">
+                style="background-color: #2dd4bf; color: #042f2e;" 
+                class="w-full md:w-auto px-6 py-3.5 rounded-xl font-black text-xs sm:text-sm text-center transition-all shadow-md shrink-0 flex items-center justify-center gap-2 hover:opacity-90">
                 <span>Ver Demo de CapyDental</span>
                 <span>→</span>
             </a>

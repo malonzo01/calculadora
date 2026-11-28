@@ -53,74 +53,74 @@
 
     <!-- Schema.org JSON-LD (GEO & Generative Engine Optimization) -->
     <script type="application/ld+json">
-    {!! json_encode([
-      '@context' => 'https://schema.org',
-      '@graph' => [
-        [
-          '@type' => 'WebApplication',
-          '@id' => 'http://calculadora.capybarasdigitales.com/#webapp',
-          'name' => 'Calculadora de Costos WhatsApp API & Retorno Financiero',
-          'url' => 'http://calculadora.capybarasdigitales.com/',
-          'applicationCategory' => 'BusinessApplication',
-          'operatingSystem' => 'All',
-          'offers' => [
-            '@type' => 'Offer',
-            'price' => '0',
-            'priceCurrency' => 'USD'
-          ],
-          'description' => 'Herramienta online para estimar costos de WhatsApp Cloud API oficial de Meta en USD y Bolívares con tasa oficial del Banco Central de Venezuela (BCV), costo laboral y retorno de inversión.'
-        ],
-        [
-          '@type' => 'LocalBusiness',
-          '@id' => 'http://calculadora.capybarasdigitales.com/#organization',
-          'name' => 'Capybaras Digitales C.A.',
-          'url' => 'http://calculadora.capybarasdigitales.com/',
-          'logo' => 'http://calculadora.capybarasdigitales.com/images/logo.png',
-          'image' => 'http://calculadora.capybarasdigitales.com/images/logo.png',
-          'description' => 'Agencia especializada en Marketing Digital, Desarrollo Web y Automatización con Inteligencia Artificial y WhatsApp en Venezuela.',
-          'telephone' => '+584244582245',
-          'address' => [
-            '@type' => 'PostalAddress',
-            'addressCountry' => 'VE',
-            'addressLocality' => 'Caracas'
-          ],
-          'areaServed' => [
-            ['@type' => 'Country', 'name' => 'Venezuela'],
-            ['@type' => 'Continent', 'name' => 'Latin America']
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "http://calculadora.capybarasdigitales.com/#webapp",
+          "name": "Calculadora de Costos WhatsApp API & Retorno Financiero",
+          "url": "http://calculadora.capybarasdigitales.com/",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "description": "Herramienta online para estimar costos de WhatsApp Cloud API oficial de Meta en USD y Bolívares con tasa oficial del Banco Central de Venezuela (BCV), costo laboral y retorno de inversión."
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "http://calculadora.capybarasdigitales.com/#organization",
+          "name": "Capybaras Digitales C.A.",
+          "url": "http://calculadora.capybarasdigitales.com/",
+          "logo": "{{ asset('images/logo.png') }}",
+          "image": "{{ asset('images/logo.png') }}",
+          "description": "Agencia especializada en Marketing Digital, Desarrollo Web y Automatización con Inteligencia Artificial y WhatsApp en Venezuela.",
+          "telephone": "+584244582245",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "VE",
+            "addressLocality": "Caracas"
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "Venezuela" },
+            { "@type": "Continent", "name": "Latin America" }
           ]
-        ],
-        [
-          '@type' => 'FAQPage',
-          '@id' => 'http://calculadora.capybarasdigitales.com/#faq',
-          'mainEntity' => [
-            [
-              '@type' => 'Question',
-              'name' => '¿Cuánto cuesta enviar mensajes por WhatsApp Cloud API en Venezuela?',
-              'acceptedAnswer' => [
-                '@type' => 'Answer',
-                'text' => 'Los primeros 1.000 mensajes de servicio salientes de cada mes son 100% gratuitos. A partir de allí, Meta cobra USD $0,026 por mensaje de servicio y USD $0,0618 por mensaje de marketing, calculados en Bolívares a la tasa oficial del Banco Central de Venezuela (BCV).'
-              ]
-            ],
-            [
-              '@type' => 'Question',
-              'name' => '¿Cómo se actualiza la tasa del Banco Central de Venezuela (BCV)?',
-              'acceptedAnswer' => [
-                '@type' => 'Answer',
-                'text' => 'La calculadora de Capybaras Digitales sincroniza automáticamente la cotización oficial del BCV en tiempo real, permitiendo ver las cifras en $ USD y en Bolívares (Bs.).'
-              ]
-            ],
-            [
-              '@type' => 'Question',
-              'name' => '¿Cómo ayuda Capybaras Digitales a automatizar la atención en WhatsApp?',
-              'acceptedAnswer' => [
-                '@type' => 'Answer',
-                'text' => 'Capybaras Digitales implementa agentes inteligentes con IA y CRM multicanal para atender consultas las 24 horas del día, responder de inmediato fuera de horario y evitar la fuga de ventas en tu negocio.'
-              ]
-            ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "http://calculadora.capybarasdigitales.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cuesta realmente enviar mensajes por WhatsApp Cloud API en Venezuela?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Los primeros 1.000 mensajes de servicio salientes de cada mes son 100% gratuitos. A partir de allí, Meta cobra USD $0,026 por mensaje de servicio y USD $0,0618 por mensaje de marketing, calculados en Bolívares a la tasa oficial del Banco Central de Venezuela (BCV)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo se actualiza la tasa del Banco Central de Venezuela (BCV)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La calculadora de Capybaras Digitales sincroniza automáticamente la cotización oficial del BCV en tiempo real, permitiendo ver las cifras en $ USD y en Bolívares (Bs.)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo ayuda Capybaras Digitales a automatizar la atención en WhatsApp?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Capybaras Digitales implementa agentes inteligentes con IA y CRM multicanal para atender consultas las 24 horas del día, responder de inmediato fuera de horario y evitar la fuga de ventas en tu negocio."
+              }
+            }
           ]
-        ]
+        }
       ]
-    ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) !!}
+    }
     </script>
 </head>
 <body class="min-h-full flex flex-col bg-[#FDFBF7] text-[#161E11] font-sans selection:bg-[#33521c] selection:text-white">
